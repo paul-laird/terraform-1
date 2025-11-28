@@ -1,6 +1,16 @@
 # This code is compatible with Terraform 4.25.0 and versions that are backward compatible to 4.25.0.
 # For information about validating this Terraform code, see https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#format-and-validate-the-configuration
 
+
+
+# Configure the Google Cloud provider
+provider "google" {
+  project = "b9ai001tmd1" # <--- ADD THIS LINE with your actual project ID
+  region  = "us-central1" # Or your desired region
+}
+
+
+
 resource "google_compute_instance" "instance-20251128-112317" {
   boot_disk {
     auto_delete = true
